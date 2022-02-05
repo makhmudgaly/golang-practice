@@ -31,3 +31,41 @@ newCard -> name of function
 string -> data type function returns  
 
 If function returns something you have to put **return type**
+
+# Arrays and slices
+
+*Array* - is fixed length list of things  
+*Slice* - An array that can grow or shrink
+
+Every element in a slice must be of same type
+
+Ex:
+```go
+cards := []string{"Ace of Diamonds", "Five of Hearts"}
+```
+
+Adding more elements to slice
+```go
+cards = append(cards, "Jack of Spades")
+```
+
+How to iterate over slice
+
+```go
+cards := []string{"Ace of Diamonds", "Five of Hearts"}
+	cards = append(cards, "Jack of Spades")
+
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
+```
+Result
+```
+0 Ace of Diamonds
+1 Five of Hearts
+2 Jack of Spades
+```
+
+i -> index of this element in the array  
+card -> current card we're iterating over  
+range cards -> take the slice of 'cards' and loop over it
