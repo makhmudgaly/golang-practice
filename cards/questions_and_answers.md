@@ -17,3 +17,17 @@ Use ***:=*** only for creating new variable
 ```go
 card = "Five of Diamonds"
 ```
+
+# Functions
+
+```go
+func newCard() string {
+	return "Five of Diamonds"
+}
+```
+
+func -> indicates that it is function  
+newCard -> name of function  
+string -> data type function returns  
+
+If function returns something you have to put **return type**
