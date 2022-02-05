@@ -69,3 +69,37 @@ Result
 i -> index of this element in the array  
 card -> current card we're iterating over  
 range cards -> take the slice of 'cards' and loop over it
+
+# Custom types
+
+```go
+package main
+
+import "fmt"
+
+// Create new type of 'deck'
+// which is a slice of strings
+type deck []string
+
+func (d deck) print() {
+	for idx, card := range d {
+		fmt.Println(idx, card)
+	}
+}
+```
+
+# Receiver functions
+
+```go
+func (d deck) print() {
+    for idx, card := range d {
+		fmt.Println(idx, card)
+	}
+}
+```
+Any varible of type deck can access method ***print()***
+
+d -> the actual copy of the deck we're working with is available in the function as a variable called d  
+deck -> Every variable of type 'deck' can call this function on itself  
+
+by convention we name d because it is one-two letter which indicates the type name
